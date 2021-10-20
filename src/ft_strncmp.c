@@ -6,11 +6,11 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 14:50:33 by dpiza             #+#    #+#             */
-/*   Updated: 2021/05/31 12:55:33 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:13:24 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

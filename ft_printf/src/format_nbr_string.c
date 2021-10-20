@@ -6,13 +6,13 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 17:03:12 by dpiza             #+#    #+#             */
-/*   Updated: 2021/10/19 19:09:57 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:26:05 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_printf.h"
 
-void	fill_sign(t_flags flags, char **str)
+static void	fill_sign(t_flags flags, char **str)
 {
 	char	*ret;
 
@@ -26,7 +26,7 @@ void	fill_sign(t_flags flags, char **str)
 	*str = ret;
 }
 
-char	*format_nbr_width(char *str, t_flags flags)
+static char	*format_nbr_width(char *str, t_flags flags)
 {
 	int		size;
 	int		str_len;
@@ -47,7 +47,7 @@ char	*format_nbr_width(char *str, t_flags flags)
 	return (ret);
 }
 
-char	*format_nbr_precision(char *str, t_flags flags)
+static char	*format_nbr_precision(char *str, t_flags flags)
 {
 	int		size;
 	int		str_len;
@@ -80,9 +80,9 @@ char	*d_format_string(va_list args, t_flags flags)
 	char	*ret;
 
 	if (flags.specifier == 'u')
-		str = ft_itoa(va_arg(args, unsigned int));
+		str = ft_ltoa(va_arg(args, unsigned int));
 	else
-		str = ft_itoa(va_arg(args, int));
+		str = ft_ltoa(va_arg(args, int));
 	if (*str == '0' && ft_strlen(str) == 1 && flags.precision)
 		*str = 0;
 	fill_sign(flags, &str);

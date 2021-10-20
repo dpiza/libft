@@ -6,11 +6,11 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 15:59:03 by dpiza             #+#    #+#             */
-/*   Updated: 2021/06/08 16:22:41 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:14:03 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

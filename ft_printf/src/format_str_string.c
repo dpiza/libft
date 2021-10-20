@@ -6,13 +6,13 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 19:49:43 by dpiza             #+#    #+#             */
-/*   Updated: 2021/10/19 19:09:52 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:23:04 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_printf.h"
 
-char	*format_str_width(char *str, t_flags flags)
+static char	*format_str_width(char *str, t_flags flags)
 {
 	int		size;
 	int		str_len;
@@ -30,7 +30,7 @@ char	*format_str_width(char *str, t_flags flags)
 	return (ret);
 }
 
-char	*format_str_precision(char *str, t_flags flags)
+static char	*format_str_precision(char *str, t_flags flags)
 {
 	int		size;
 	int		str_len;

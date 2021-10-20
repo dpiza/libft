@@ -6,11 +6,11 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 15:12:42 by dpiza             #+#    #+#             */
-/*   Updated: 2021/05/27 14:54:17 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:14:48 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

@@ -1,7 +1,6 @@
 SRCS_DIR = ./src
-HEADERS_DIR = ./src
 OBJS_DIR = ./obj
-INCL_DIR = ./includes
+INCLUDES_DIR = ./includes
 PRINTF_DIR = ./ft_printf
 
 CFLAGS = -Wall -Wextra -Werror
@@ -24,8 +23,8 @@ SRCS_FILES = ft_memcpy.c ft_isspace.c ft_putstr_fd.c add_char.c \
 
 SRCS = $(addprefix $(SRCS_DIR)/, $(SRCS_FILES))
 
-HEADERS_FILES = libft.h
-HEADERS = $(addprefix $(HEADERS_DIR)/, $(HEADERS_FILES))
+INCLUDES_FILES = libft.h
+INCLUDES = $(addprefix $(INCLUDES_DIR)/, $(INCLUDES_FILES))
 
 OBJS_FILES = $(SRCS_FILES:.c=.o)
 OBJS = $(addprefix $(OBJS_DIR)/, $(OBJS_FILES))
@@ -40,7 +39,7 @@ $(NAME): $(OBJS_DIR) $(OBJS)
 $(OBJS_DIR):
 	mkdir -p $(OBJS_DIR)
 
-$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c $(HEADERS)
+$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c $(INCLUDES)
 	$(CC) $(FLAGS) -I ./ -c $< -o $@
 
 printf: $(NAME)

@@ -6,11 +6,11 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 15:40:11 by dpiza             #+#    #+#             */
-/*   Updated: 2021/06/08 14:39:09 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:14:09 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static int	ft_wcount(char const *s, char c)
 {

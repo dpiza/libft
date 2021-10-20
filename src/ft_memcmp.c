@@ -6,11 +6,11 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 15:45:00 by dpiza             #+#    #+#             */
-/*   Updated: 2021/06/08 15:25:25 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:14:44 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

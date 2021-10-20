@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/21 14:17:57 by dpiza             #+#    #+#             */
-/*   Updated: 2021/10/19 23:14:51 by dpiza            ###   ########.fr       */
+/*   Created: 2021/06/15 14:27:23 by dpiza             #+#    #+#             */
+/*   Updated: 2021/10/19 23:17:50 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
-{
-	while (n > 0)
-	{
-		ft_memcpy(dest, src, sizeof(char));
-		if (*(unsigned char *)src == (unsigned char)c)
-			return (dest + 1);
-		dest++;
-		src++;
-		n--;
-	}
-	return (NULL);
-}
+# include <stdlib.h>
+# include <unistd.h>
+# include "libft.h"
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 32
+# endif
+
+char	*get_next_line(int fd);
+
+# define OPEN_MAX 256
+
+#endif

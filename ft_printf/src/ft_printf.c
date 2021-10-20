@@ -6,13 +6,13 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 13:50:14 by dpiza             #+#    #+#             */
-/*   Updated: 2021/10/19 19:08:27 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:23:16 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_printf.h"
 
-char	*form_string(va_list args, t_flags flags)
+static char	*form_string(va_list args, t_flags flags)
 {
 	char	*ret;
 
@@ -35,7 +35,7 @@ char	*form_string(va_list args, t_flags flags)
 	return (ret);
 }
 
-int	format_handler(const char **s, va_list args, int *i)
+static int	format_handler(const char **s, va_list args, int *i)
 {
 	char	*ret;
 	t_flags	flags;

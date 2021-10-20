@@ -6,11 +6,11 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 19:15:08 by dpiza             #+#    #+#             */
-/*   Updated: 2021/09/01 19:21:10 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:15:53 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	add_char(char **str, char c)
 {

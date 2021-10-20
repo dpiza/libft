@@ -6,13 +6,13 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 16:21:56 by dpiza             #+#    #+#             */
-/*   Updated: 2021/10/19 19:10:05 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:22:27 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_printf.h"
 
-int	is_specification(char c)
+static int	is_specification(char c)
 {
 	char	*specs;
 
@@ -23,7 +23,7 @@ int	is_specification(char c)
 		return (-1);
 }
 
-int	is_flag(char c, t_flags *flags)
+static int	is_flag(char c, t_flags *flags)
 {
 	if (c == '-')
 		flags->justify = TRUE;
@@ -43,7 +43,7 @@ int	is_flag(char c, t_flags *flags)
 	return (1);
 }
 
-int	is_precision(char c, t_flags *flags)
+static int	is_precision(char c, t_flags *flags)
 {
 	if (c == '.')
 	{
@@ -69,7 +69,7 @@ int	is_precision(char c, t_flags *flags)
 	return (1);
 }
 
-void	init_struct(t_flags *flags)
+static void	init_struct(t_flags *flags)
 {
 	flags->justify = 0;
 	flags->plus = 0;

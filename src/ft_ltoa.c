@@ -6,11 +6,11 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 12:38:37 by dpiza             #+#    #+#             */
-/*   Updated: 2021/10/19 20:18:13 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:14:56 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static int	ft_longlen(long n)
 {

@@ -6,11 +6,11 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 11:57:12 by dpiza             #+#    #+#             */
-/*   Updated: 2021/05/27 14:54:08 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:15:29 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_isascii(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 00:19:29 by dpiza             #+#    #+#             */
-/*   Updated: 2021/09/03 14:33:47 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:14:27 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_base_is_valid(char *base)
 {

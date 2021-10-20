@@ -6,11 +6,11 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 22:27:36 by dpiza             #+#    #+#             */
-/*   Updated: 2021/06/08 16:01:21 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:14:16 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

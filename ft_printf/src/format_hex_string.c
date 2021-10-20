@@ -6,13 +6,13 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 15:17:22 by dpiza             #+#    #+#             */
-/*   Updated: 2021/10/19 19:10:01 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:22:37 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_printf.h"
 
-char	*zero_x(char *str, t_flags flags)
+static char	*zero_x(char *str, t_flags flags)
 {
 	char	*ret;
 

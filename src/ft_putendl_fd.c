@@ -6,11 +6,11 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 22:25:45 by dpiza             #+#    #+#             */
-/*   Updated: 2021/06/08 14:45:55 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:14:20 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

@@ -6,11 +6,11 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 12:47:06 by dpiza             #+#    #+#             */
-/*   Updated: 2021/05/27 14:54:55 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/19 23:12:40 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_toupper(int c)
 {
