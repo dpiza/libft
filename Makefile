@@ -19,7 +19,7 @@ SRCS_FILES = ft_memcpy.c ft_isspace.c ft_putstr_fd.c add_char.c \
 			ft_putendl_fd.c ft_putnbr_fd.c ft_split.c ft_strlcat.c \
 			ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c \
 			ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c \
-			get_next_line.c ft_dtoa.c
+			get_next_line.c ft_dtoa.c ft_atof.c
 
 SRCS = $(addprefix $(SRCS_DIR)/, $(SRCS_FILES))
 

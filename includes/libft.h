@@ -6,7 +6,7 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 11:48:22 by dpiza             #+#    #+#             */
-/*   Updated: 2021/10/20 16:25:24 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/24 22:37:18 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 char	*ft_dtoa(double n, int p);
+float	ft_atof(const char *nptr);
 
 #endif
