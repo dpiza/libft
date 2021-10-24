@@ -6,37 +6,36 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 15:51:31 by dpiza             #+#    #+#             */
-/*   Updated: 2021/10/24 23:49:38 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/10/25 00:46:31 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+#include <math.h>
 
-float	ft_atof(const char *nptr)
+float	ft_atof(const char *str)
 {
 	float	ret;
-	float	signal;
+	float	sign;
 	float	dec;
+	int		i;
 
-	ret = 0;
-	dec = 1;
-	signal = 1;
-	while (ft_isspace(*nptr) || *nptr == '-')
+	ret = 0.0;
+	dec = 0.0;
+	sign = 1.0;
+	while (ft_isspace(*str) || *str == '-')
 	{
-		if (*nptr == '-')
-			signal = -1;
-		nptr++;
+		if (*str == '-')
+			sign = -1.0;
+		str++;
 	}
-	while (ft_isdigit(*nptr) || *nptr == '.')
+	while (ft_isdigit(*str))
+		ret = ret * 10 + (*str++ - '0');
+	i = -1;
+	if (*str == '.' && *str++)
 	{
-		if (*nptr == '.' && dec == 1)
-			dec = 0.1;
-		else
-		{
-			ret *= dec * 10;
-			ret += dec * (*nptr - 48);
-		}
-		nptr++;
+		while (ft_isdigit(*str))
+			dec += (pow(10, i--) * (*str++ - '0'));
 	}
-	return (ret * signal);
+	return (sign * (ret + dec));
 }
