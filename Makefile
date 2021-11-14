@@ -34,26 +34,26 @@ PRINTF = $(PRINTF_DIR)/libftprintf.a
 all: $(NAME)
 
 $(NAME): $(OBJS_DIR) $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
 
 $(OBJS_DIR):
-	mkdir -p $(OBJS_DIR)
+	@mkdir -p $(OBJS_DIR)
 
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c $(INCLUDES)
-	$(CC) $(FLAGS) -I ./ -c $< -o $@
+	@$(CC) $(FLAGS) -I ./ -c $< -o $@
 
 printf: $(NAME)
-	make -C $(PRINTF_DIR)
-	cp $(PRINTF) $(NAME)
+	@make -C $(PRINTF_DIR)
+	@cp $(PRINTF) $(NAME)
 
 clean:
-	make -C $(PRINTF_DIR) clean
-	$(RM) $(OBJS)
+	@make -C $(PRINTF_DIR) clean
+	@$(RM) $(OBJS)
 
 fclean: clean
-	make -C $(PRINTF_DIR) fclean
-	$(RM) $(NAME)
-	rm -rf $(OBJS_DIR)
+	@make -C $(PRINTF_DIR) fclean
+	@$(RM) $(NAME)
+	@rm -rf $(OBJS_DIR)
 
 re: fclean all
 

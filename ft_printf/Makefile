@@ -29,23 +29,23 @@ LIBFT = $(LIBFT_DIR)/libft.a
 all: $(NAME) 
 
 $(NAME): $(LIBFT) $(OBJS_DIR) $(OBJS)
-	cp $(LIBFT) $(NAME)
-	ar rcs $(NAME) $(OBJS)
+	@cp $(LIBFT) $(NAME)
+	@ar rcs $(NAME) $(OBJS)
 
 $(OBJS_DIR):
-	mkdir -p $(OBJS_DIR)
+	@mkdir -p $(OBJS_DIR)
 
 ${OBJS_DIR}/%.o: $(SRCS_DIR)/%.c $(HEADERS)
-	$(CC) -I../ -I./src -c $< -o $@
+	@$(CC) -I../ -I./src -c $< -o $@
 
 bonus: $(NAME)
 
 clean:
-	$(RM) $(OBJS)
+	@$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
-	rm -rf $(OBJS_DIR)
+	@$(RM) $(NAME)
+	@rm -rf $(OBJS_DIR)
 
 re: fclean all
 
