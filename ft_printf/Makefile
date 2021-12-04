@@ -1,52 +1,87 @@
-SRCS_DIR = ./src
-HEADERS_DIR = ../includes
-OBJS_DIR = ./obj
-LIBFT_DIR = ../
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/12/04 18:39:45 by dpiza             #+#    #+#              #
+#    Updated: 2021/12/04 19:56:55 by dpiza            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-CFLAGS = -Wall -Wextra -Werror
-LEAKCHECK = -g -fsanitize=address
-CC = gcc $(CFLAGS)
-RM = rm -f
+NAME 			= libftprintf.a
 
-NAME = libftprintf.a
+SRCS_DIR		= ./src
+OBJS_DIR		= ./obj
+INCLUDES_DIR	= ../includes
 
-SRCS_FILES = ft_printf.c \
-			flag_parse.c \
-			format_str_string.c \
-			format_nbr_string.c \
-			format_hex_string.c
+LIBFT_DIR		= ../
+LIBFT			= $(LIBFT_DIR)/libft.a
 
-SRCS = $(addprefix $(SRCS_DIR)/, $(SRCS_FILES))
+CC				= gcc
+CFLAGS			= -Wall -Wextra -Werror #$(LEAKCHECK)
+LEAKCHECK		= -g -fsanitize=address
+LFLAGS 			= -L$(LIBFT_DIR) -I$(INCLUDES_DIR)
 
-HEADERS_FILES = ft_printf.h
-HEADERS = $(addprefix $(HEADERS_DIR)/, $(HEADERS_FILES))
+RM				= rm -f
+NORM			= norminette
 
-OBJS_FILES = ${SRCS_FILES:.c=.o}
-OBJS = $(addprefix $(OBJS_DIR)/, $(OBJS_FILES))
+INCLUDES_FILES	= ft_printf.h
+INCLUDES		= $(addprefix $(INCLUDES_DIR)/, $(INCLUDES_FILES))
 
-LIBFT = $(LIBFT_DIR)/libft.a
+# **************************************************************************** #
+#                                 FT_PRINTF                                    #
+# **************************************************************************** #
 
-all: $(NAME) 
+SRCS =			ft_printf.c \
+				flag_parse.c \
+				format_str_string.c \
+				format_nbr_string.c \
+				format_hex_string.c
 
-$(NAME): $(LIBFT) $(OBJS_DIR) $(OBJS)
-	@cp $(LIBFT) $(NAME)
-	@ar rcs $(NAME) $(OBJS)
+OBJS =			$(addprefix $(OBJS_DIR)/, $(notdir $(SRCS:.c=.o)))
+
+# **************************************************************************** #
+#                                   MAKE                                       #
+# **************************************************************************** #
+
+$(NAME):		$(LIBFT) $(OBJS_DIR) $(OBJS)
+				@cp $(LIBFT) $(NAME)
+				@ar rcs $(NAME) $(OBJS)
+
+all:			$(NAME)
 
 $(OBJS_DIR):
-	@mkdir -p $(OBJS_DIR)
+				@mkdir -p $(OBJS_DIR)
 
-${OBJS_DIR}/%.o: $(SRCS_DIR)/%.c $(HEADERS)
-	@$(CC) -I../ -I./src -c $< -o $@
+${OBJS_DIR}/%.o: $(SRCS_DIR)/%.c $(INCLUDES)
+				@$(CC) -c $< -o $@ $(LFLAGS)
 
-bonus: $(NAME)
+bonus:			$(NAME)
+
+.PHONY:			all bonus
+
+# **************************************************************************** #
+#                                   CLEAN                                      #
+# **************************************************************************** #
 
 clean:
-	@$(RM) $(OBJS)
+				@$(RM) $(OBJS)
 
-fclean: clean
-	@$(RM) $(NAME)
-	@rm -rf $(OBJS_DIR)
+fclean:			clean
+				@$(RM) $(NAME)
+				@rm -rf $(OBJS_DIR)
 
-re: fclean all
+re:				fclean all
 
-.PHONY:	all clean fclean re bonus
+.PHONY:			clean fclean re
+
+# **************************************************************************** #
+#                                NORMINETTE                                    #
+# **************************************************************************** #
+
+norm:
+				@$(NORM) $(SRCS_DIR)/*.c $(INCLUDES_DIR)/*.h
+
+.PHONY:			norm
