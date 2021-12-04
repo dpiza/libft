@@ -63,11 +63,11 @@ Re-code of a set of the libc functions, as defined in their man.
 
 The bonus functions are made to manage a list defined by the following struct:
 
-```
+```C
 typedef struct	s_list
 {
-	void	*content;
-	struct	s_list *next;
+	void			*content;	/* the data contained in the element */
+	struct s_list 	*next;		/* the next element’s address || NULL if last element */
 }	t_list;
 ```
 
@@ -96,26 +96,26 @@ The following functions have been added to the library as result of later projec
 
 To compile the library, either run:
 
-```
+```Shell
 $ make
 ```
 or if the ft_printf is allowed in the project:
-```
+```Shell
 $ make printf
 ```
 
 Then, include its header in the code:
-```
+```C
 #include "libft.h"
 ```
 
 or, with ft_printf allowed, you can add:
-```
+```C
 #include "ft_printf.h"
 ```
 
 Lastly, add the following flags when compiling the project:
-```
+```Shell
 -L./libft_dir -I./libft_dir/includes -lft 
 ```
 
