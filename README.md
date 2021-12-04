@@ -10,8 +10,11 @@ be used for all next projects. Later projects are included to the library. Ex: f
 
 ## Functions
 
-Re-code of a set of the libc functions, as defined in their man.
 Some functions present the same prototype and behaviors as the originals. Others are either not included in the libc, or included in a different form.
+
+### Libc Functions
+
+Re-code of a set of the libc functions, as defined in their man.
 
 | Function |  Description |
 |---|---|
@@ -36,6 +39,12 @@ Some functions present the same prototype and behaviors as the originals. Others
 |[`ft_memcmp`](/src/ft_memcmp.c)|compare memory areas|
 |[`ft_strnstr`](/src/ft_strnstr.c)|locate a substring in a string|
 |[`ft_atoi`](/src/ft_atoi.c)|convert a string to an integer|
+
+
+### Aditional Functions
+
+| Function |  Description |
+|---|---|
 |[`ft_calloc`](/src/ft_calloc.c)|allocate dynamic memory|
 |[`ft_strdup`](/src/ft_strdup.c)|duplicate a string|
 |[`ft_substr`](/src/ft_substr.c)|return a substring from a string|
@@ -43,14 +52,38 @@ Some functions present the same prototype and behaviors as the originals. Others
 |[`ft_strtrim`](/src/ft_strtrim.c)|copy string trimming selected characters|
 |[`ft_split`](/src/ft_split.c)|split string with character as delimiter|
 |[`ft_itoa`](/src/ft_itoa.c)|return a string representing an integer|
-|[`ft_strmapi`](/src/ft_strmapi.c)|apllies function to each character|
+|[`ft_strmapi`](/src/ft_strmapi.c)|apllies the provided function to each character|
+|[`ft_striteri`](/src/ft_striteri.c)|applies the provided function to each character passed by reference|
 |[`ft_putchar_fd`](/src/ft_putchar_fd.c)|outputs character to fd|
 |[`ft_putstr_fd`](/src/ft_putstr_fd.c)|outputs string to fd|
 |[`ft_putendl_fd`](/src/ft_putendl_fd.c)|outputs string to fd followed by a new line|
 |[`ft_putnbr_fd`](/src/ft_putnbr_fd.c)|outputs integer to fd|
 
+### Bonus Functions
 
-## Project Functions
+The bonus functions are made to manage a list defined by the following struct:
+
+```
+typedef struct	s_list
+{
+	void	*content;
+	struct	s_list *next;
+}	t_list;
+```
+
+| Function |  Description |
+|---|---|
+|[`ft_lstnew`](/src/ft_lstnew.c)|create a new element|
+|[`ft_lstadd_front`](/src/ft_lstadd_front.c)|adds the element at the beginning of the list|
+|[`ft_lstadd_back`](/src/ft_lstadd_back.c)|adds the element at the end of the list|
+|[`ft_lstsize`](/src/ft_lstsize.c)|counts the number of elements in a list|
+|[`ft_lstlast`](/src/ft_lstlast.c)|returns the last element of the list|
+|[`ft_lstdelone`](/src/ft_lstdelone.c)|deletes the content and free the element|
+|[`ft_lstclear`](/src/ft_lstclear.c)|deletes and free every element and its successors|
+|[`ft_lstiter`](/src/ft_lstiter.c)|iterates the list applying the provided function|
+|[`ft_lstmap`](/src/ft_lstmap.c)|iterates the list applying the provided function and return a list of affected elements|
+
+### Project Functions
 
 The following functions have been added to the library as result of later projects.
 
@@ -73,17 +106,17 @@ $ make printf
 
 Then, include its header in the code:
 ```
-#include "includes/libft.h"
+#include "libft.h"
 ```
 
-or, with ft_printf allowed:
+or, with ft_printf allowed, you can add:
 ```
-#include "includes/ft_printf.h"
+#include "ft_printf.h"
 ```
 
 Lastly, add the following flags when compiling the project:
 ```
--L./libft_dir -lft 
+-L./libft_dir -I./libft_dir/includes -lft 
 ```
 
 ## License
