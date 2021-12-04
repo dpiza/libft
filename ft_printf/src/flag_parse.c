@@ -6,11 +6,11 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 16:21:56 by dpiza             #+#    #+#             */
-/*   Updated: 2021/10/19 23:22:27 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/12/04 17:36:26 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_printf.h"
+#include "ft_printf.h"
 
 static int	is_specification(char c)
 {

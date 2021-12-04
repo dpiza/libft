@@ -6,7 +6,7 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 13:52:00 by dpiza             #+#    #+#             */
-/*   Updated: 2021/10/19 23:07:00 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/12/04 17:37:17 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # define FALSE 0
 
 # include <stdarg.h>
-# include <unistd.h>
 # include "libft.h"
 
 typedef struct s_flags

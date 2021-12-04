@@ -6,11 +6,11 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 14:05:04 by dpiza             #+#    #+#             */
-/*   Updated: 2021/10/19 23:14:00 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/12/04 17:34:23 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {

@@ -6,11 +6,11 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 17:03:12 by dpiza             #+#    #+#             */
-/*   Updated: 2021/10/19 23:26:05 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/12/04 17:36:10 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_printf.h"
+#include "ft_printf.h"
 
 static void	fill_sign(t_flags flags, char **str)
 {

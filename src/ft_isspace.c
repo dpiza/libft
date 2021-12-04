@@ -6,11 +6,11 @@
 /*   By: dpiza <dpiza@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 15:03:56 by dpiza             #+#    #+#             */
-/*   Updated: 2021/10/19 23:15:13 by dpiza            ###   ########.fr       */
+/*   Updated: 2021/12/04 17:32:37 by dpiza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 int	ft_isspace(int c)
 {
