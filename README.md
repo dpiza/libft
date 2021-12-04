@@ -66,7 +66,7 @@ The bonus functions are made to manage a list defined by the following struct:
 ```C
 typedef struct	s_list
 {
-	void			*content;	/* the data contained in the element */
+	void		*content;	/* the data contained in the element */
 	struct s_list 	*next;		/* the next element’s address || NULL if last element */
 }	t_list;
 ```
